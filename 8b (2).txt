@@ -1,0 +1,20 @@
+<html>
+<body>
+<table>
+<form method="post">
+<caption>Calculator</caption>
+<tr><td>Value1</td><td><input type="text" name="val1"/></td><td>Value2</td><td><input type="text" name="val2"/></td><td rowspan="2"><input type="submit" value="Submit" name="submit"/></td></tr>
+</form>
+<?php
+if(isset($_POST['submit']))
+{
+	$v1=$_POST['val1'];
+	$v2=$_POST['val2'];
+	echo "<tr><td>Addition</td><td>".($v1+$v2)."</td></tr>";
+	echo "<tr><td>Subtraction</td><td>".($v1-$v2)."</td></tr>";
+}
+echo "</table>";
+?>
+</body>
+</html>
+

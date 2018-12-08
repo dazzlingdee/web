@@ -1,0 +1,40 @@
+<html>
+<head><title>Third</title></head>
+<body>
+<style>
+p{
+top:50%;
+left:50%;
+position:absolute;
+transform:translate(-50%,50%);
+}
+</style>
+<p id="demo"></p>
+<script>
+var ids=document.getElementById("demo");
+var val1=setInterval(inTimer,1000);
+var fs=5;
+function inTimer()
+{
+ids.innerHTML='Growing';
+ids.setAttribute('style',"font-size:"+fs+"px;color:red");
+fs+=5;
+if(fs>=50)
+{
+clearInterval(val1);
+var val2=setInterval(deTimer,1000);
+}
+}
+function deTimer()
+{
+fs-=5;
+ids.innerHTML='Shrinking';
+ids.setAttribute('style',"font-size:"+fs+"px;color:blue");
+if(fs==5)
+{
+clearInterval(val2);
+}
+}
+</script>
+</body>
+</html>

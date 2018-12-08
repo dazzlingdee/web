@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>First program</title>
+</head>
+<body>
+<style>
+table,td,th{
+border:1px solid black;
+border-collapse:collapse;
+text-align:center;
+color:blue;
+}
+</style>
+<script>
+function calc(clicked_id)
+{
+var val1=parseFloat(document.getElementById("value1").value);
+var val2=parseFloat(document.getElementById("value2").value);
+if(isNaN(val1) || isNaN(val2))
+	alert("Enter a number");
+else if(clicked_id=="add")
+	document.getElementById("ans").value=val1+val2;
+}
+function cls()
+{
+value1.value="0";
+value2.value="0";
+ans.value="";
+}
+</script>
+<table>
+<tr><th clospan="4">Simple calculator</th></tr>
+<tr><td>Value1</td><td><input type="text" id="value1",value="0"/></td><td>Value2></td><td><input type="text" id="value2" value="0"/></td></tr>
+<tr><td><input type="button" id="add" value="Addition" onclick="calc(this.id)"/></td><td><input type="button" id="sub" value="Subtraction" onclick="calc(this.id)"/></td><td><input type="button" id="mul" value="Multiplication" onclick="calc(this.id)"/></td><td><input type="button" id="sub" value="Subtraction" onclick="calc(this.id)"/></td></tr>
+<tr><td>Answer</td><td><input type="text" id="ans" value=""disabled/></td><td colspan='2'><input type="button" value="CLEAR" onclick="cls()"/></td></tr></table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<?php
+$states="Mississippi Alabama Masacchusets Kansas Texas";
+$state1=explode(" ",$states);
+$statesArray=[];
+echo "Before array";
+foreach($state1 as $i=>$value)
+{
+	print("states[$i]=$value<br>");
+}
+foreach($state1 as $state)
+{
+if(preg_match("/xas$/",$state))
+{
+$statesArray[0]=($state);
+}
+}
+foreach($state1 as $state)
+{
+if(preg_match("/^M.*s$/i",$state))
+{
+$statesArray[1]=($state);
+}
+}
+foreach($state1 as $state)
+{
+if(preg_match("/^k.*s$/",$state))
+{
+$statesArray[2]=($state);
+}
+}
+foreach($statesArray as $array=>$value)
+	print("states[$array]=$value<br>");
+
+?>
+</html>
+
+
